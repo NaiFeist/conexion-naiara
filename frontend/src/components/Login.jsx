@@ -28,19 +28,16 @@ const Login = () => {
     .then(response => response.json())
     .then(response => {
       if (response) {
-        // console.log(response.data.nombre)
-        // console.log(response.data.rol)
         if(Object.keys(response.data).length === 0) { // DEL OBJ(RESPONSE)Y  CLAVE ( DATA )  TAMAÑO  AQUI YA MIRAMOS EN LA BD
           console.log('Datos Incorrectos') //esto es simplemente un mensaje para ver si entré en el if
 
         }else{
-          dispatch(loginActions.login({
+          dispatch(loginActions.login({  // DISPATCH PARA PONER DATOS 
             name: response.data.nombre,
             rol: response.data.rol
             }))
-            console.log('naiara guapa')
           navigate('/home')
-                console.log(response)  
+                //console.log(response)  
         }
 
       }

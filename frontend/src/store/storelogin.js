@@ -9,9 +9,9 @@ const authSlice = createSlice({  // DENTRO NECESITAMOS NOMBRE PARA SLICE
     initialState: initialAuthState, // ESTADO INICIAL
     reducers: {  // ES COMO LOS ESTADOS EL REDUCERS
         login: (state, action) => {  // CUANDO ESTA AUTENTICADO
-            const userData = action.payload // VARIABLE QUE CUANDO LLAME AL LOGIN, COGE LOS DATOS QUE TE PASO Y LO VARGAS EN LA VAR USERDATA Y LUEGO ACTUALIZO ESTADO DE USERLOG Y USERNAME
+            const userData = action.payload // VARIABLE QUE CUANDO LLAME AL LOGIN, COGE LOS DATOS QUE TE PASO Y LO CARGAS EN LA VAR USERDATA Y LUEGO ACTUALIZO ESTADO DE USERLOG Y USERNAME
             state.isAutenticated = true
-            state.userName = userData.name  // NOMBRE QUE ESTA EN LA BD
+            state.userName = userData.name  // NOMBRE QUE ESTA EN LA "BD" QUE YA DEFINIMOS ARRIBA
             state.userRol = userData.rol
         },
         logout: (state) => {
