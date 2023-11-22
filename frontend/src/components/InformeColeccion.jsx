@@ -7,8 +7,8 @@ function InformeColeccion(props) {
     const col = [
         { title: "Nombre", field: "nombre" },
         { title: "Marca", field: "marca" },
-        { title: "Tipo", field: "tipo", type: "numeric", filtering: true },
-        { title: "Precio", field: "precio", type: "numeric", filtering: false, }
+        { title: "Tipo", field: "tipo", filtering: true },
+        { title: "Precio", field: "precio", filtering: true }
     ];
 
     console.log("Datos:", props.datos);
@@ -28,6 +28,7 @@ function InformeColeccion(props) {
             : undefined
         }
                 options={{
+                    filtering: true,
                     exportMenu: [
                         {
                             label: "Exportar a PDF",
