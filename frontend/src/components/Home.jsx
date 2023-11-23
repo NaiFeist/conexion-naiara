@@ -56,6 +56,7 @@ function Home() {
     dispatch(loginActions.logout());
     // VA A LA PAG RAIZ
     navigate('/');
+    // console.log()
   }
   //Comprobamos por la consola qué obtenemos en userData
   console.log(userData)
