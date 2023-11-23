@@ -212,7 +212,9 @@ function Home() {
             <TableCell>Marca</TableCell>
             <TableCell>Tipo</TableCell>
             <TableCell>Precio</TableCell>
+            {userData.userRol === 'admin' && (
             <TableCell>Eliminar</TableCell>
+            )}
 
           </TableRow>
         </TableHead>
