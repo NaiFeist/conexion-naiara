@@ -11,6 +11,7 @@ import { TableContainer, Table, TableHead, TableRow, TableCell, TableBody } from
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import { IconButton,Tooltip } from '@mui/material';
 import AdbIcon from '@mui/icons-material/Adb';
+import Topbar from './Topbar'
 
 
 
@@ -117,48 +118,7 @@ function Home() {
 
 
   return <>
- <AppBar position="static" style={{ padding: '0 16px' }}>
-  <Grid container alignItems="center" justifyContent="center">
-    <Container>
-      <Toolbar>
-        <Grid container alignItems="center" justifyContent="center">
-          {isAdmin ? (
-            <Grid item xs={1} md={1} lg={1}>
-              <AccessibilityNewIcon />
-            </Grid>
-          ) : (
-            <Grid item xs={1} md={1} lg={1}>
-              <AdbIcon />
-            </Grid>
-          )}  
-          <Grid item xs={3} md={3} lg={3}>
-            <Typography variant="h6">{userData.userName}</Typography>
-          </Grid>
-          <Grid item xs={5} md={4} lg={4}>
-            <Grid container justifyContent="center">
-            <Tooltip title="Inicio">
-              <Button color="inherit" component={Link} to="/home">Inicio</Button>
-              </Tooltip>
-              <Tooltip title="Informe">
-              {userData.userRol === 'admin' && (
-
-                <Button color="inherit" component={Link} to="/informe">Informe</Button>
-              )}
-              </Tooltip>
-              <Tooltip title="Ayuda">
-              <Button color="inherit" component={Link}  to="/Feist_Vega_Naiara_UT3A1.pdf" target="_blank">Ayuda </Button>
-              </Tooltip>
-            </Grid>
-          </Grid>
-          <Grid item xs={3} md={4} lg={4} style={{ textAlign: 'right' }}>
-            <Button variant="contained" onClick={handleLogout}>Salir</Button>
-          </Grid>
-        </Grid>
-      </Toolbar>
-    </Container>
-  </Grid>
-</AppBar>
-
+ <Topbar></Topbar>
 
     <Paper elevation={3}>
       <Box component='form' autoComplete='off' onSubmit={handleSaveItem} >

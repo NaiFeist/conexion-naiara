@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Grid, Paper, Avatar, Typography, Box, TextField, Button } from '@mui/material';
+import { Grid, Paper, Avatar, Typography, Box, TextField, Button,Tooltip } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
 //Importamos el useDispatch del react-redux
@@ -87,6 +87,7 @@ const Login = () => {
             value={password}
             onChange={handlePasswordChange}
           />
+          <Tooltip title="Acceder">
           <Button
             type="submit"
             fullWidth
@@ -95,6 +96,7 @@ const Login = () => {
           >
             Acceder
           </Button>
+          </Tooltip>
         </Box>
       </Paper>
     </Grid>
