@@ -1,7 +1,7 @@
 import React, { useState,useEffect } from "react";
 import Topbar from "./Topbar";
 import InformeColeccion from "./InformeColeccion";
-import { Button } from '@mui/material';
+import { Button,Tooltip } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux'
 
@@ -39,10 +39,12 @@ function Informe() {
     <>
       <Topbar />
       {mostrarInforme && <InformeColeccion datos={informeData} />}
+      <Tooltip title="Informe Coleccion">
       <button variant="contained" color="primary" style={{ marginTop: '20px', display: 'block', margin: 'auto', padding: '15px 30px',borderRadius: '8px'}}
         onClick={handleInformeClick}>
         Informe Colección
       </button>
+      </Tooltip>
     </>
   );
 }

@@ -3,6 +3,7 @@ import Login from './components/Login'; // IMPORTAR PARA USAR COMPONENTE LOGIN
 import React from 'react'
 import Home from './components/Home';
 import Informe from './components/Informe';
+import TablaEx from './components/TablaEx';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 
 // Naiara Feist Vega
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
     {
         path:'informe',
         element:<Informe/>
+    },
+    {
+        path:'tablaex',
+        element:<TablaEx/>
     }
     ]
     }

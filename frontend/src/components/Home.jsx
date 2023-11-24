@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 import AccessibilityNewIcon from '@mui/icons-material/AccessibilityNew';
 import { TableContainer, Table, TableHead, TableRow, TableCell, TableBody } from '@mui/material';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
-import { IconButton } from '@mui/material';
+import { IconButton,Tooltip } from '@mui/material';
 import AdbIcon from '@mui/icons-material/Adb';
 
 
@@ -136,11 +136,18 @@ function Home() {
           </Grid>
           <Grid item xs={5} md={4} lg={4}>
             <Grid container justifyContent="center">
+            <Tooltip title="Inicio">
               <Button color="inherit" component={Link} to="/home">Inicio</Button>
+              </Tooltip>
+              <Tooltip title="Informe">
               {userData.userRol === 'admin' && (
+
                 <Button color="inherit" component={Link} to="/informe">Informe</Button>
               )}
-              <Button color="inherit" component={Link} to="/ayuda">Ayuda</Button>
+              </Tooltip>
+              <Tooltip title="Ayuda">
+              <Button color="inherit" component={Link}  to="/Feist_Vega_Naiara_UT3A1.pdf" target="_blank">Ayuda </Button>
+              </Tooltip>
             </Grid>
           </Grid>
           <Grid item xs={3} md={4} lg={4} style={{ textAlign: 'right' }}>
@@ -197,9 +204,11 @@ function Home() {
             </TextField>
           </Grid>
           <Grid item xs={8} md={3}>
+          <Tooltip title="Añadir">
             <Button color="primary" variant="contained" type='submit'>
               añadir
             </Button>
+            </Tooltip>
           </Grid>
         </Grid>
       </Box>
@@ -228,9 +237,11 @@ function Home() {
               <TableCell>{rowData.precio}</TableCell>
               <TableCell>
               {userData.userRol === 'admin' && (
+                <Tooltip title="Borrar">
                 <IconButton onClick={() => handleDeleteItem(rowData.id)}>
                   <DeleteForeverIcon />
                 </IconButton>
+                </Tooltip>
               )}
               </TableCell>
             </TableRow>
