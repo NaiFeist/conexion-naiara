@@ -190,7 +190,7 @@ const userData = useSelector(state => state.login) // ACCEDIENDO A "STORELOGIN" 
               <TableCell>{rowData.nombre}</TableCell>
               <TableCell>{rowData.login}</TableCell>
               <TableCell>{rowData.password}</TableCell>
-              <TableCell>{rowData.rolusu}</TableCell>
+              <TableCell>{rowData.rol}</TableCell>
               <TableCell>
               {/* {userData.userRol === 'admin' && (
                 <Tooltip title="Borrar">
