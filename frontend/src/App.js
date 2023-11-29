@@ -24,7 +24,7 @@ const router = createBrowserRouter([
         element:<Informe/>
     },
     {
-        path:'tablaex',
+        path:'prueba',
         element:<TablaEx/>
     }
     ]

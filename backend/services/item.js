@@ -44,6 +44,10 @@ async function deleteData(req, res) {
     return result.affectedRows
 }
 
+// CREAR AQUI PARA LA NUEVA TABLA EL INSERT SELECT Y DELETE   ---------------------------------------------------------
+
+
+
 
 
 

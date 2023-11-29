@@ -5,10 +5,10 @@ import { ExportCsv, ExportPdf } from "@material-table/exporters";
 
 function InformeColeccion(props) {
     const col = [
-        { title: "Nombre", field: "nombre" },
-        { title: "Marca", field: "marca" },
-        { title: "Tipo", field: "tipo", filtering: true },
-        { title: "Precio", field: "precio", filtering: true }
+        { title: "Nombre", field: "nombre", filtering:true },
+        { title: "Login", field: "login",filtering:false },
+        { title: "Password", field: "password", filtering: false },
+        { title: "Rol", field: "rol", filtering: false }
     ];
 
     console.log("Datos:", props.datos);
@@ -18,9 +18,9 @@ function InformeColeccion(props) {
             <MaterialTable
                 columns={col}
                 data={props.datos}
-                title="Fuert Sacrificio de Tabla"
+                title="Gestión de Usarios"
                 renderSummaryRow={({ column, data }) =>
-          column.field === "precio"
+          column.field === ""
             ? {
                 value: data.reduce((total, row) => total + row.precio, 0),
                 style: { background: "yellow" }, // Estilo de la fila de resumen
@@ -40,8 +40,8 @@ function InformeColeccion(props) {
                         },
                     ],
                     headerStyle: {
-                        backgroundColor: "#282c34", 
-                        color: "white", 
+                        backgroundColor: "#282c34",
+                        color: "white",
                       },
                       draggable: false,
                       columnsButton: true,

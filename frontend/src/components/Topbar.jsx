@@ -43,13 +43,18 @@ function Topbar() {
                 <Button color="inherit" component={Link} to="/home">Inicio</Button>
                 </Tooltip>
                 <Tooltip title="Informe">
-                {userData.userRol === 'admin' && (
+                {userData.userRol === 'admin'&& (
   
                   <Button color="inherit" component={Link} to="/informe">Informe</Button>
                 )}
                 </Tooltip>
                 <Tooltip title="Ayuda">
-                <Button color="inherit" component={Link}  to="/Feist_Vega_Naiara_UT3A1.pdf" target="_blank">Ayuda </Button>
+                <Button color="inherit" component={Link}  to="/Feist_Vega_Naiara_UT4A1.pdf" target="_blank">Ayuda </Button>
+                </Tooltip>
+                <Tooltip title="Gestion">
+                {userData.userRol === 'admin' && ( 
+                  <Button color="inherit" component={Link} to="/prueba">Gestion de Usuario</Button>
+                  )}
                 </Tooltip>
               </Grid>
             </Grid>

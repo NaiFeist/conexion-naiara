@@ -45,7 +45,24 @@ function Informe() {
         Informe Colección
       </button>
       </Tooltip>
+      <Tooltip title="Informe Usuarios">
+        <Button
+          variant="contained"
+          color="primary"
+          style={{
+            marginTop: '20px',
+            display: 'block',
+            margin: 'auto',
+            padding: '15px 30px',
+            borderRadius: '8px'
+          }}
+          onClick={handleInformeClick}
+        >
+          Informe Usuarios
+        </Button>
+      </Tooltip>
     </>
+    
   );
 }
 

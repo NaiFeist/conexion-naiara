@@ -67,6 +67,11 @@ app.get('/deleteItem', async function (req, res, next) {
     }
 })
 
+
+
+
+
+
 //Iniciamos la API
 app.listen(port)
 console.log('API escuchando en el puerto ' + port)
