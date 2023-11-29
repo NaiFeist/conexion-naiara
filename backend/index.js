@@ -67,6 +67,36 @@ app.get('/deleteItem', async function (req, res, next) {
     }
 })
 
+// --------------------------------------------
+app.get('/deleteUser', async function (req, res, next) {
+    try {
+        res.json(await item.deleteUser(req, res))
+    } catch (err) {
+        console.error(`Error while deleting items `, err.message);
+        next(err);
+    }
+})
+
+app.get('/getUser', async function (req, res, next) {
+    try {
+        res.json(await item.getUser(req, res));
+    } catch (err) {
+        console.error(`Error while getting data `, err.message);
+        next(err);
+    }
+});
+app.get('/addUser', async function (req, res, next) {
+    console.log(req)
+    try {
+        res.json(await item.insertUser(req))
+    } catch (err) {
+        console.error(`Error while inserting items `, err.message);
+        next(err);
+    }
+})
+
+
+
 
 
 

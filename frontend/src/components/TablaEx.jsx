@@ -36,7 +36,7 @@ const userData = useSelector(state => state.login) // ACCEDIENDO A "STORELOGIN" 
       navigate('/')
     }
 
-    fetch('http://localhost:3030/getData')  // DENTRO DEL USEFFECT PARA QUE CUANDO ENTRES A LA PAG ESTE LA TABLA CARGADA
+    fetch('http://localhost:3030/getUser')  // DENTRO DEL USEFFECT PARA QUE CUANDO ENTRES A LA PAG ESTE LA TABLA CARGADA
       .then(response => response.json())
       .then(data => {
         setTableData(data.data);
@@ -71,7 +71,7 @@ const userData = useSelector(state => state.login) // ACCEDIENDO A "STORELOGIN" 
   function handleSubmit(e) {
     e.preventDefault(); // PAL BOTON DE SUBMIT PA QUE HAGA LO Q YO DIGA
     console.log(item.nombre)
-    fetch(`http://localhost:3030/addItem?nombre=${item.nombre}&login=${item.login}&password=${item.password}&rolusu=${item.rolusu}`) // METER VARIABLE -> COMILLA CAMBADA
+    fetch(`http://localhost:3030/addUser?nombre=${item.nombre}&login=${item.login}&password=${item.password}&rolusu=${item.rolusu}`) // METER VARIABLE -> COMILLA CAMBADA
       .then(response => response.json())
       .then(response => {
         if (response > 0) {
@@ -86,7 +86,7 @@ const userData = useSelector(state => state.login) // ACCEDIENDO A "STORELOGIN" 
   }
   const handleGetItem = (e) => {
 
-    fetch(`http://localhost:3030/getData`)
+    fetch(`http://localhost:3030/getUser`)
       .then(response => response.json())
       .then(response => {
         if (response) {
@@ -97,7 +97,7 @@ const userData = useSelector(state => state.login) // ACCEDIENDO A "STORELOGIN" 
 
 
   const handleDeleteItem = (id) => {
-    fetch(`http://localhost:3030/deleteItem?id=${id}`)
+    fetch(`http://localhost:3030/deleteIUser?id=${id}`)
       .then(response => response.json())
       .then(response => {
         if (response) {
