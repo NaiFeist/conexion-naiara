@@ -67,7 +67,7 @@ function Informe() {
         Informe Colección
       </button>
       </Tooltip>
-      <Tooltip title="Informe Usarios">
+      <Tooltip title="Informe Préstamos">
         <Button
           variant="contained"
           color="primary"
