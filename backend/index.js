@@ -94,7 +94,34 @@ app.get('/addUser', async function (req, res, next) {
         next(err);
     }
 })
+// ----------------------------------------------- ESTE PA LA RECU
 
+app.get('/deletePrestamo', async function (req, res, next) {
+    try {
+        res.json(await item.deletePrestamo(req, res))
+    } catch (err) {
+        console.error(`Error while deleting items `, err.message);
+        next(err);
+    }
+})
+
+app.get('/getPrestamo', async function (req, res, next) {
+    try {
+        res.json(await item.getPrestamo(req, res));
+    } catch (err) {
+        console.error(`Error while getting data `, err.message);
+        next(err);
+    }
+});
+app.get('/addPrestamo', async function (req, res, next) {
+    console.log(req)
+    try {
+        res.json(await item.insertPrestamo(req))
+    } catch (err) {
+        console.error(`Error while inserting items `, err.message);
+        next(err);
+    }
+})
 
 
 
